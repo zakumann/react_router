@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# 리액트 라우터 V6 튜토리얼
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[React Router v6 튜토리얼](https://velog.io/@velopert/react-router-v6-tutorial)
 
-## Available Scripts
+## 리액트 라우터
 
-In the project directory, you can run:
+신규 페이지를 불러오지 않는 상황에서 각각의 url에 따라 선택된 데이터를 하나의 페이지에서 렌더링 해주는 라이브러리이다.
 
-### `yarn start`
+### SPA
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+싱글 페이지 애플리케이션
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+SPA는 브라우저에서 자바스크립트를 이용하여 단일 웹페이지 상의 HTML 요소를 동적으로 생성하고 조작한다. 따라서 서버 측에서 텅빈 HTML 문서 하나와 자바스크립트 코드만 내려주고 그 이후에 모든 일들은 클라이언트 측에서 브라우저가 비동기로 처리하게 된다.
 
-### `yarn test`
+### SSR
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+서버 사이트 렌더링
 
-### `yarn build`
+서버 측에서 웹페이지를 랜더링하는 기술을 뜻하며, SSG와 가장 큰 차이점은 빌드 타임에 웹사이트 전체를 미리 만들어 놓는 것이 아니라, 클라이언트로 부터 요청이 들어올 때마다 싨히간으로 해당 웹페이지를 만들어낸다. 변경된 데이터가 즉시 웹페이지에 반영 되고 유저마다 다른 경험을 제공하기도 용이해진다. 주로 전자 상거래 플랫폼이나 소셜 네트워크 서비스에 매우 적합한 랜더링 전략이다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### SSG
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Static Site Generator, 누가 접속하든 항상 동일한 내용을 보여주는 웹사이트를 만드는데 최적화된 방법이라고 볼 수 있다. 제품 카탈로그나 개인 블로그처럼 컨텐츠의 변경이 자주 일어나지 않는 비교적 소규모 웹사이트를 제작할 때 매우 유용하다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+검색 엔진 최적화가 중요한 마케팅 웹사이트를 제작할 때는 SSG가 매우 보편적으로 사용된다.
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+서버 사이드 
